@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{500A2BCC-92BE-4DAC-8615-E6B3265CB00E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modding_Helper</RootNamespace>
+    <AssemblyName>Modding-Helper</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>47</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomControls\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomButtonFlat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomFolderButtons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomTabButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomTabButton.Designer.cs">
+      <DependentUpon>CustomTabButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\FolderButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\FolderButtons.designer.cs">
+      <DependentUpon>FolderButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ProgramButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ProgramButtons.designer.cs">
+      <DependentUpon>ProgramButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\WebsiteButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\WebsiteButtons.designer.cs">
+      <DependentUpon>WebsiteButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FolderSelectDialog\FolderSelectDialog.cs" />
+    <Compile Include="FolderSelectDialog\Reflector.cs" />
+    <Compile Include="frm_folder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_folder.designer.cs">
+      <DependentUpon>frm_folder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_program.designer.cs">
+      <DependentUpon>frm_program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_website.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_website.designer.cs">
+      <DependentUpon>frm_website.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StickyWindow.cs" />
+    <EmbeddedResource Include="CustomControls\CustomTabButton.resx">
+      <DependentUpon>CustomTabButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\FolderButtons.resx">
+      <DependentUpon>FolderButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\ProgramButtons.resx">
+      <DependentUpon>ProgramButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\WebsiteButtons.resx">
+      <DependentUpon>WebsiteButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_folder.resx">
+      <DependentUpon>frm_folder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_program.resx">
+      <DependentUpon>frm_program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_website.resx">
+      <DependentUpon>frm_website.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxBottom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxBottom2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxTop1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxTop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxTop3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moveBoxTop1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moveBoxTop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moveBoxTop3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moveBoxTop4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moveBoxTop5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxBottom3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabButton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabButton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabButton3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seperator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-21x21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainBoxTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabButton1_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabButton2_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabButton3_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_minimize_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_close_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\defaultlogo.png" />
+    <None Include="Resources\btnbg_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

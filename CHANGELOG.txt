@@ -1,0 +1,8 @@
+v1.0.0.0
+- Initial Release
+
+v1.1.0.47
+- Complete rewrite of the Modding-Helper.
+--- Modding-Helper now supports resizing.
+- Fixed a few typos.
+- Added an option to enabled/disable StickyWindow.
