@@ -66,14 +66,14 @@
             this.cb_minimizeToTray = new Modding_Helper.CustomCheckBox();
             this.mainBackground = new System.Windows.Forms.Panel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_minimize = new Modding_Helper.CustomButtonFlat();
+            this.btn_close = new Modding_Helper.CustomButtonFlat();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.cms_notify = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainBoxHeaderCenter = new Modding_Helper.CustomPictureBox();
-            this.btn_minimize = new Modding_Helper.CustomButtonFlat();
             this.mainBoxHeaderBack = new Modding_Helper.CustomPictureBox();
-            this.btn_close = new Modding_Helper.CustomButtonFlat();
             this.mainBoxHeaderRight = new Modding_Helper.CustomPictureBox();
             this.mainBoxHeaderLeft = new Modding_Helper.CustomPictureBox();
             this.mainBoxBottomRight = new Modding_Helper.CustomPictureBox();
@@ -114,7 +114,7 @@
             this.buttonBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.buttonBox.Controls.Add(this.btn_websites);
             this.buttonBox.Controls.Add(this.btn_settings);
             this.buttonBox.Controls.Add(this.btn_folder);
@@ -130,6 +130,8 @@
             // btn_websites
             // 
             this.btn_websites.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_websites.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_websites.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_websites.BackgroundImage")));
             this.btn_websites.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_websites.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_websites.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
@@ -139,9 +141,9 @@
             this.btn_websites.MinimumSize = new System.Drawing.Size(64, 20);
             this.btn_websites.Name = "btn_websites";
             this.btn_websites.OwnerDrawText = "Websites";
-            this.btn_websites.Part1 = null;
-            this.btn_websites.Part2 = null;
-            this.btn_websites.Part3 = null;
+            this.btn_websites.Part1 = ((System.Drawing.Image)(resources.GetObject("btn_websites.Part1")));
+            this.btn_websites.Part2 = ((System.Drawing.Image)(resources.GetObject("btn_websites.Part2")));
+            this.btn_websites.Part3 = ((System.Drawing.Image)(resources.GetObject("btn_websites.Part3")));
             this.btn_websites.Size = new System.Drawing.Size(64, 20);
             this.btn_websites.TabIndex = 7;
             this.btn_websites.Click += new System.EventHandler(this.btn_websites_Click);
@@ -149,6 +151,8 @@
             // btn_settings
             // 
             this.btn_settings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_settings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_settings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_settings.BackgroundImage")));
             this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_settings.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_settings.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
@@ -158,9 +162,9 @@
             this.btn_settings.MinimumSize = new System.Drawing.Size(64, 20);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.OwnerDrawText = "Settings";
-            this.btn_settings.Part1 = null;
-            this.btn_settings.Part2 = null;
-            this.btn_settings.Part3 = null;
+            this.btn_settings.Part1 = ((System.Drawing.Image)(resources.GetObject("btn_settings.Part1")));
+            this.btn_settings.Part2 = ((System.Drawing.Image)(resources.GetObject("btn_settings.Part2")));
+            this.btn_settings.Part3 = ((System.Drawing.Image)(resources.GetObject("btn_settings.Part3")));
             this.btn_settings.Size = new System.Drawing.Size(64, 20);
             this.btn_settings.TabIndex = 6;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
@@ -168,6 +172,8 @@
             // btn_folder
             // 
             this.btn_folder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_folder.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_folder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_folder.BackgroundImage")));
             this.btn_folder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_folder.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_folder.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
@@ -177,9 +183,9 @@
             this.btn_folder.MinimumSize = new System.Drawing.Size(64, 20);
             this.btn_folder.Name = "btn_folder";
             this.btn_folder.OwnerDrawText = "Folder";
-            this.btn_folder.Part1 = null;
-            this.btn_folder.Part2 = null;
-            this.btn_folder.Part3 = null;
+            this.btn_folder.Part1 = ((System.Drawing.Image)(resources.GetObject("btn_folder.Part1")));
+            this.btn_folder.Part2 = ((System.Drawing.Image)(resources.GetObject("btn_folder.Part2")));
+            this.btn_folder.Part3 = ((System.Drawing.Image)(resources.GetObject("btn_folder.Part3")));
             this.btn_folder.Size = new System.Drawing.Size(64, 20);
             this.btn_folder.TabIndex = 5;
             this.btn_folder.Click += new System.EventHandler(this.btn_folder_Click);
@@ -187,6 +193,8 @@
             // btn_programs
             // 
             this.btn_programs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_programs.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_programs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_programs.BackgroundImage")));
             this.btn_programs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_programs.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_programs.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
@@ -196,9 +204,9 @@
             this.btn_programs.MinimumSize = new System.Drawing.Size(64, 20);
             this.btn_programs.Name = "btn_programs";
             this.btn_programs.OwnerDrawText = "Programs";
-            this.btn_programs.Part1 = null;
-            this.btn_programs.Part2 = null;
-            this.btn_programs.Part3 = null;
+            this.btn_programs.Part1 = ((System.Drawing.Image)(resources.GetObject("btn_programs.Part1")));
+            this.btn_programs.Part2 = ((System.Drawing.Image)(resources.GetObject("btn_programs.Part2")));
+            this.btn_programs.Part3 = ((System.Drawing.Image)(resources.GetObject("btn_programs.Part3")));
             this.btn_programs.Size = new System.Drawing.Size(64, 20);
             this.btn_programs.TabIndex = 4;
             this.btn_programs.Click += new System.EventHandler(this.btn_programs_Click);
@@ -206,6 +214,8 @@
             // btn_modding
             // 
             this.btn_modding.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_modding.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_modding.BackgroundImage = global::Modding_Helper.Properties.Resources.tabButton2_active;
             this.btn_modding.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_modding.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_modding.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
@@ -215,9 +225,9 @@
             this.btn_modding.MinimumSize = new System.Drawing.Size(64, 20);
             this.btn_modding.Name = "btn_modding";
             this.btn_modding.OwnerDrawText = "Modding";
-            this.btn_modding.Part1 = null;
-            this.btn_modding.Part2 = null;
-            this.btn_modding.Part3 = null;
+            this.btn_modding.Part1 = global::Modding_Helper.Properties.Resources.tabButton1_active;
+            this.btn_modding.Part2 = global::Modding_Helper.Properties.Resources.tabButton2_active;
+            this.btn_modding.Part3 = global::Modding_Helper.Properties.Resources.tabButton3_active;
             this.btn_modding.Size = new System.Drawing.Size(64, 20);
             this.btn_modding.TabIndex = 3;
             this.btn_modding.Click += new System.EventHandler(this.btn_modding_Click);
@@ -245,6 +255,7 @@
             // 
             this.imgModding.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgModding.BackgroundImage = global::Modding_Helper.Properties.Resources.defaultlogo;
             this.imgModding.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.imgModding.Location = new System.Drawing.Point(0, 191);
             this.imgModding.Name = "imgModding";
@@ -371,6 +382,7 @@
             this.btn_addProgram.Size = new System.Drawing.Size(284, 25);
             this.btn_addProgram.TabIndex = 1;
             this.btn_addProgram.TabStop = false;
+            this.toolTip.SetToolTip(this.btn_addProgram, "Add new program");
             this.btn_addProgram.UseVisualStyleBackColor = false;
             this.btn_addProgram.Click += new System.EventHandler(this.btn_addProgram_Click);
             // 
@@ -435,6 +447,7 @@
             this.btn_addFolder.Size = new System.Drawing.Size(284, 25);
             this.btn_addFolder.TabIndex = 3;
             this.btn_addFolder.TabStop = false;
+            this.toolTip.SetToolTip(this.btn_addFolder, "Add new folder");
             this.btn_addFolder.UseVisualStyleBackColor = false;
             this.btn_addFolder.Click += new System.EventHandler(this.btn_addFolder_Click);
             // 
@@ -499,6 +512,7 @@
             this.btn_addWebsite.Size = new System.Drawing.Size(284, 25);
             this.btn_addWebsite.TabIndex = 5;
             this.btn_addWebsite.TabStop = false;
+            this.toolTip.SetToolTip(this.btn_addWebsite, "Add new website");
             this.btn_addWebsite.UseVisualStyleBackColor = false;
             this.btn_addWebsite.Click += new System.EventHandler(this.btn_addWebsite_Click);
             // 
@@ -522,7 +536,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_settings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnl_settings.BackColor = System.Drawing.Color.DimGray;
+            this.pnl_settings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pnl_settings.Controls.Add(this.btn_resetSettings);
             this.pnl_settings.Controls.Add(this.btn_exportSettings);
             this.pnl_settings.Controls.Add(this.btn_importSettings);
@@ -543,6 +557,7 @@
             this.btn_resetSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_resetSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_resetSettings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_resetSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_resetSettings.BackgroundImage")));
             this.btn_resetSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_resetSettings.DisplayFocusCues = false;
@@ -560,7 +575,8 @@
             this.btn_resetSettings.Size = new System.Drawing.Size(278, 25);
             this.btn_resetSettings.TabIndex = 11;
             this.btn_resetSettings.TabStop = false;
-            this.btn_resetSettings.UseVisualStyleBackColor = true;
+            this.toolTip.SetToolTip(this.btn_resetSettings, "Reset all settings to default");
+            this.btn_resetSettings.UseVisualStyleBackColor = false;
             this.btn_resetSettings.Click += new System.EventHandler(this.btn_resetSettings_Click);
             // 
             // btn_exportSettings
@@ -568,6 +584,7 @@
             this.btn_exportSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_exportSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_exportSettings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_exportSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_exportSettings.BackgroundImage")));
             this.btn_exportSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_exportSettings.DisplayFocusCues = false;
@@ -585,7 +602,8 @@
             this.btn_exportSettings.Size = new System.Drawing.Size(278, 25);
             this.btn_exportSettings.TabIndex = 10;
             this.btn_exportSettings.TabStop = false;
-            this.btn_exportSettings.UseVisualStyleBackColor = true;
+            this.toolTip.SetToolTip(this.btn_exportSettings, "Export current settings");
+            this.btn_exportSettings.UseVisualStyleBackColor = false;
             this.btn_exportSettings.Click += new System.EventHandler(this.btn_exportSettings_Click);
             // 
             // btn_importSettings
@@ -593,6 +611,7 @@
             this.btn_importSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_importSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_importSettings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btn_importSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_importSettings.BackgroundImage")));
             this.btn_importSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_importSettings.DisplayFocusCues = false;
@@ -610,13 +629,16 @@
             this.btn_importSettings.Size = new System.Drawing.Size(278, 25);
             this.btn_importSettings.TabIndex = 9;
             this.btn_importSettings.TabStop = false;
-            this.btn_importSettings.UseVisualStyleBackColor = true;
+            this.toolTip.SetToolTip(this.btn_importSettings, "Import saved settings");
+            this.btn_importSettings.UseVisualStyleBackColor = false;
             this.btn_importSettings.Click += new System.EventHandler(this.btn_importSettings_Click);
             // 
             // imgSettings
             // 
             this.imgSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgSettings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.imgSettings.BackgroundImage = global::Modding_Helper.Properties.Resources.defaultlogo;
             this.imgSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.imgSettings.Location = new System.Drawing.Point(0, 191);
             this.imgSettings.Name = "imgSettings";
@@ -639,6 +661,7 @@
             // cb_stickyWindow
             // 
             this.cb_stickyWindow.AutoSize = true;
+            this.cb_stickyWindow.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cb_stickyWindow.DisplayFocusCues = false;
             this.cb_stickyWindow.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.cb_stickyWindow.Location = new System.Drawing.Point(13, 71);
@@ -646,12 +669,13 @@
             this.cb_stickyWindow.Size = new System.Drawing.Size(106, 18);
             this.cb_stickyWindow.TabIndex = 3;
             this.cb_stickyWindow.Text = "Sticky Window";
-            this.cb_stickyWindow.UseVisualStyleBackColor = true;
+            this.cb_stickyWindow.UseVisualStyleBackColor = false;
             this.cb_stickyWindow.CheckedChanged += new System.EventHandler(this.cb_stickyWindow_CheckedChanged);
             // 
             // cb_alwaysOnTop
             // 
             this.cb_alwaysOnTop.AutoSize = true;
+            this.cb_alwaysOnTop.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cb_alwaysOnTop.DisplayFocusCues = false;
             this.cb_alwaysOnTop.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.cb_alwaysOnTop.Location = new System.Drawing.Point(13, 49);
@@ -659,12 +683,13 @@
             this.cb_alwaysOnTop.Size = new System.Drawing.Size(107, 18);
             this.cb_alwaysOnTop.TabIndex = 2;
             this.cb_alwaysOnTop.Text = "Always On Top";
-            this.cb_alwaysOnTop.UseVisualStyleBackColor = true;
+            this.cb_alwaysOnTop.UseVisualStyleBackColor = false;
             this.cb_alwaysOnTop.CheckedChanged += new System.EventHandler(this.cb_alwaysOnTop_CheckedChanged);
             // 
             // cb_closeToTray
             // 
             this.cb_closeToTray.AutoSize = true;
+            this.cb_closeToTray.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cb_closeToTray.DisplayFocusCues = false;
             this.cb_closeToTray.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.cb_closeToTray.Location = new System.Drawing.Point(13, 27);
@@ -672,12 +697,13 @@
             this.cb_closeToTray.Size = new System.Drawing.Size(100, 18);
             this.cb_closeToTray.TabIndex = 1;
             this.cb_closeToTray.Text = "Close To Tray";
-            this.cb_closeToTray.UseVisualStyleBackColor = true;
+            this.cb_closeToTray.UseVisualStyleBackColor = false;
             this.cb_closeToTray.CheckedChanged += new System.EventHandler(this.cb_closeToTray_CheckedChanged);
             // 
             // cb_minimizeToTray
             // 
             this.cb_minimizeToTray.AutoSize = true;
+            this.cb_minimizeToTray.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cb_minimizeToTray.DisplayFocusCues = false;
             this.cb_minimizeToTray.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.cb_minimizeToTray.Location = new System.Drawing.Point(13, 5);
@@ -685,7 +711,7 @@
             this.cb_minimizeToTray.Size = new System.Drawing.Size(118, 18);
             this.cb_minimizeToTray.TabIndex = 0;
             this.cb_minimizeToTray.Text = "Minimize To Tray";
-            this.cb_minimizeToTray.UseVisualStyleBackColor = true;
+            this.cb_minimizeToTray.UseVisualStyleBackColor = false;
             this.cb_minimizeToTray.CheckedChanged += new System.EventHandler(this.cb_minimizeToTray_CheckedChanged);
             // 
             // mainBackground
@@ -695,6 +721,60 @@
             this.mainBackground.Name = "mainBackground";
             this.mainBackground.Size = new System.Drawing.Size(304, 333);
             this.mainBackground.TabIndex = 33;
+            // 
+            // btn_minimize
+            // 
+            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimize.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_minimize.BackgroundImage")));
+            this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_minimize.DisplayFocusCues = false;
+            this.btn_minimize.DrawBorder = true;
+            this.btn_minimize.DrawClickBorder = false;
+            this.btn_minimize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_minimize.FlatAppearance.BorderSize = 0;
+            this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_minimize.Location = new System.Drawing.Point(291, 10);
+            this.btn_minimize.MaximumSize = new System.Drawing.Size(11, 10);
+            this.btn_minimize.MinimumSize = new System.Drawing.Size(11, 10);
+            this.btn_minimize.Name = "btn_minimize";
+            this.btn_minimize.OwnerDrawText = null;
+            this.btn_minimize.Size = new System.Drawing.Size(11, 10);
+            this.btn_minimize.TabIndex = 27;
+            this.btn_minimize.TabStop = false;
+            this.btn_minimize.Text = "customButtonFlat3";
+            this.toolTip.SetToolTip(this.btn_minimize, "Minimize");
+            this.btn_minimize.UseVisualStyleBackColor = false;
+            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
+            this.btn_minimize.MouseEnter += new System.EventHandler(this.btn_minimize_MouseEnter);
+            this.btn_minimize.MouseLeave += new System.EventHandler(this.btn_minimize_MouseLeave);
+            // 
+            // btn_close
+            // 
+            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_close.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_close.BackgroundImage")));
+            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_close.DisplayFocusCues = false;
+            this.btn_close.DrawBorder = true;
+            this.btn_close.DrawClickBorder = false;
+            this.btn_close.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_close.FlatAppearance.BorderSize = 0;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.Location = new System.Drawing.Point(303, 10);
+            this.btn_close.MaximumSize = new System.Drawing.Size(11, 10);
+            this.btn_close.MinimumSize = new System.Drawing.Size(11, 10);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.OwnerDrawText = null;
+            this.btn_close.Size = new System.Drawing.Size(11, 10);
+            this.btn_close.TabIndex = 28;
+            this.btn_close.TabStop = false;
+            this.btn_close.Text = "customButtonFlat4";
+            this.toolTip.SetToolTip(this.btn_close, "Close");
+            this.btn_close.UseVisualStyleBackColor = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            this.btn_close.MouseEnter += new System.EventHandler(this.btn_close_MouseEnter);
+            this.btn_close.MouseLeave += new System.EventHandler(this.btn_close_MouseLeave);
             // 
             // notifyIcon
             // 
@@ -713,6 +793,7 @@
             // 
             // showToolStripMenuItem
             // 
+            this.showToolStripMenuItem.Image = global::Modding_Helper.Properties.Resources.show_small_icon;
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
             this.showToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.showToolStripMenuItem.Text = "Show";
@@ -720,6 +801,7 @@
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = global::Modding_Helper.Properties.Resources.close_small_icon;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
@@ -728,6 +810,7 @@
             // mainBoxHeaderCenter
             // 
             this.mainBoxHeaderCenter.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.mainBoxHeaderCenter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mainBoxHeaderCenter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainBoxHeaderCenter.BackgroundImage")));
             this.mainBoxHeaderCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainBoxHeaderCenter.Location = new System.Drawing.Point(112, 0);
@@ -738,33 +821,9 @@
             this.mainBoxHeaderCenter.TabIndex = 25;
             this.mainBoxHeaderCenter.TabStop = false;
             // 
-            // btn_minimize
-            // 
-            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_minimize.BackgroundImage")));
-            this.btn_minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_minimize.DisplayFocusCues = false;
-            this.btn_minimize.DrawBorder = true;
-            this.btn_minimize.DrawClickBorder = false;
-            this.btn_minimize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_minimize.FlatAppearance.BorderSize = 0;
-            this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minimize.Location = new System.Drawing.Point(291, 10);
-            this.btn_minimize.MaximumSize = new System.Drawing.Size(11, 10);
-            this.btn_minimize.MinimumSize = new System.Drawing.Size(11, 10);
-            this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.OwnerDrawText = null;
-            this.btn_minimize.Size = new System.Drawing.Size(11, 10);
-            this.btn_minimize.TabIndex = 27;
-            this.btn_minimize.TabStop = false;
-            this.btn_minimize.Text = "customButtonFlat3";
-            this.btn_minimize.UseVisualStyleBackColor = true;
-            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
-            this.btn_minimize.MouseEnter += new System.EventHandler(this.btn_minimize_MouseEnter);
-            this.btn_minimize.MouseLeave += new System.EventHandler(this.btn_minimize_MouseLeave);
-            // 
             // mainBoxHeaderBack
             // 
+            this.mainBoxHeaderBack.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mainBoxHeaderBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainBoxHeaderBack.BackgroundImage")));
             this.mainBoxHeaderBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainBoxHeaderBack.Dock = System.Windows.Forms.DockStyle.Top;
@@ -776,31 +835,6 @@
             this.mainBoxHeaderBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mainBoxHeaderBack.TabIndex = 24;
             this.mainBoxHeaderBack.TabStop = false;
-            // 
-            // btn_close
-            // 
-            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_close.BackgroundImage")));
-            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_close.DisplayFocusCues = false;
-            this.btn_close.DrawBorder = true;
-            this.btn_close.DrawClickBorder = false;
-            this.btn_close.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btn_close.FlatAppearance.BorderSize = 0;
-            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Location = new System.Drawing.Point(303, 10);
-            this.btn_close.MaximumSize = new System.Drawing.Size(11, 10);
-            this.btn_close.MinimumSize = new System.Drawing.Size(11, 10);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.OwnerDrawText = null;
-            this.btn_close.Size = new System.Drawing.Size(11, 10);
-            this.btn_close.TabIndex = 28;
-            this.btn_close.TabStop = false;
-            this.btn_close.Text = "customButtonFlat4";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            this.btn_close.MouseEnter += new System.EventHandler(this.btn_close_MouseEnter);
-            this.btn_close.MouseLeave += new System.EventHandler(this.btn_close_MouseLeave);
             // 
             // mainBoxHeaderRight
             // 
@@ -845,6 +879,7 @@
             // 
             this.mainBoxBottomCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainBoxBottomCenter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mainBoxBottomCenter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainBoxBottomCenter.BackgroundImage")));
             this.mainBoxBottomCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainBoxBottomCenter.Location = new System.Drawing.Point(112, 350);
@@ -873,6 +908,7 @@
             // 
             this.mainBoxRight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainBoxRight.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mainBoxRight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainBoxRight.BackgroundImage")));
             this.mainBoxRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainBoxRight.Location = new System.Drawing.Point(312, 99);
@@ -888,6 +924,7 @@
             // 
             this.mainBoxLeft.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.mainBoxLeft.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mainBoxLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainBoxLeft.BackgroundImage")));
             this.mainBoxLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainBoxLeft.Location = new System.Drawing.Point(0, 99);
@@ -902,6 +939,7 @@
             // mainBoxTopRight
             // 
             this.mainBoxTopRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainBoxTopRight.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mainBoxTopRight.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainBoxTopRight.BackgroundImage")));
             this.mainBoxTopRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainBoxTopRight.Location = new System.Drawing.Point(208, 50);
@@ -916,6 +954,7 @@
             // 
             this.mainBoxTopCenter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainBoxTopCenter.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mainBoxTopCenter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainBoxTopCenter.BackgroundImage")));
             this.mainBoxTopCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainBoxTopCenter.Location = new System.Drawing.Point(112, 50);
@@ -929,6 +968,7 @@
             // 
             // mainBoxTopLeft
             // 
+            this.mainBoxTopLeft.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mainBoxTopLeft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainBoxTopLeft.BackgroundImage")));
             this.mainBoxTopLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainBoxTopLeft.Location = new System.Drawing.Point(0, 50);
@@ -946,11 +986,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(320, 416);
             this.ControlBox = false;
-            this.Controls.Add(this.pnl_settings);
             this.Controls.Add(this.pnl_modding);
-            this.Controls.Add(this.pnl_websites);
             this.Controls.Add(this.pnl_programs);
             this.Controls.Add(this.pnl_folder);
+            this.Controls.Add(this.pnl_websites);
+            this.Controls.Add(this.pnl_settings);
+            this.Controls.Add(this.mainBackground);
             this.Controls.Add(this.mainBoxHeaderCenter);
             this.Controls.Add(this.btn_minimize);
             this.Controls.Add(this.mainBoxHeaderBack);
@@ -966,7 +1007,6 @@
             this.Controls.Add(this.mainBoxTopRight);
             this.Controls.Add(this.mainBoxTopCenter);
             this.Controls.Add(this.mainBoxTopLeft);
-            this.Controls.Add(this.mainBackground);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

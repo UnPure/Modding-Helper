@@ -1,4 +1,15 @@
-﻿using FolderSelect;
+﻿//////////////////////////////////////////////////////////////////////////////
+// Modding-Helper
+//
+// Copyright (c) 2016 UnPure-Gaming - All rights reserved.
+//
+// This software is provided 'as-is', without any express or implied warranty.
+// In no event will the author be held liable for any damages arising from
+// the use of this software.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+using FolderSelect;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -140,9 +151,6 @@ namespace Modding_Helper
                 //imgModding.BackgroundImage = Properties.Resources.defaultlogo;
                 //imgSettings.BackgroundImage = Properties.Resources.defaultlogo;
             }
-
-            imgModding.BackgroundImage = Properties.Resources.defaultlogo;
-            imgSettings.BackgroundImage = Properties.Resources.defaultlogo;
         }
 
         private void frm_main_Resize(object sender, EventArgs e)
@@ -415,6 +423,16 @@ namespace Modding_Helper
             Stream stream = httpWebReponse.GetResponseStream();
             return Image.FromStream(stream);
         }
+
+        private static string UppercaseFirst(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+
+            return char.ToUpper(s[0]) + s.Substring(1);
+        }
         #endregion
 
         #region MainButtons_Click
@@ -424,12 +442,14 @@ namespace Modding_Helper
             fsd.Title = "Select Folder";
             fsd.InitialDirectory = @"c:\";
 
-            if (fsd.ShowDialog(IntPtr.Zero))
+            if (fsd.ShowDialog(this.Handle))
             {
                 frm_folder frm_folderName = new frm_folder();
+                frm_folderName.txt_folderName.Text = Path.GetFileName(fsd.FileName);
+                frm_folderName.txt_folderName.SelectionStart = frm_folderName.txt_folderName.TextLength;
                 frm_folderName.ShowDialog();
 
-                if (frm_folder.cancel == 0)
+                if (!frm_folder.cancel)
                 {
                     make_newFolderButtonAndStore(frm_folder.folderName, fsd.FileName);
                 }
@@ -447,9 +467,11 @@ namespace Modding_Helper
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 frm_program frm_programName = new frm_program();
+                frm_programName.txt_programName.Text = UppercaseFirst(Path.GetFileNameWithoutExtension(ofd.FileName));
+                frm_programName.txt_programName.SelectionStart = frm_programName.txt_programName.TextLength;
                 frm_programName.ShowDialog();
 
-                if (frm_program.cancel == 0)
+                if (!frm_program.cancel)
                 {
                     make_newProgramButtonAndStore(frm_program.programName, ofd.FileName);
                 }
@@ -461,7 +483,7 @@ namespace Modding_Helper
             frm_website frm_websiteName = new frm_website();
             frm_websiteName.ShowDialog();
 
-            if (frm_website.cancel == 0)
+            if (!frm_website.cancel)
             {
                 make_newWebsiteButtonAndStore(frm_website.websiteName, frm_website.websiteURL);
             }

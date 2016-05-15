@@ -123,6 +123,16 @@ namespace Modding_Helper.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_small_icon {
+            get {
+                object obj = ResourceManager.GetObject("close_small_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap defaultlogo {
             get {
                 object obj = ResourceManager.GetObject("defaultlogo", resourceCulture);
@@ -306,6 +316,16 @@ namespace Modding_Helper.Properties {
         internal static System.Drawing.Bitmap seperator {
             get {
                 object obj = ResourceManager.GetObject("seperator", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap show_small_icon {
+            get {
+                object obj = ResourceManager.GetObject("show_small_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

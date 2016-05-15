@@ -1,4 +1,15 @@
-﻿using System.Windows.Forms;
+﻿//////////////////////////////////////////////////////////////////////////////
+// Modding-Helper
+//
+// Copyright (c) 2016 UnPure-Gaming - All rights reserved.
+//
+// This software is provided 'as-is', without any express or implied warranty.
+// In no event will the author be held liable for any damages arising from
+// the use of this software.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+using System.Windows.Forms;
 using System.Drawing;
 
 namespace Modding_Helper
