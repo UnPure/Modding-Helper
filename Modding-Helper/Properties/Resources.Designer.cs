@@ -153,6 +153,16 @@ namespace Modding_Helper.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_128x128 {
+            get {
+                object obj = ResourceManager.GetObject("icon_128x128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_21x21 {
             get {
                 object obj = ResourceManager.GetObject("icon_21x21", resourceCulture);

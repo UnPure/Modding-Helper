@@ -130,13 +130,25 @@ namespace Modding_Helper.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool donotchangethis {
             get {
                 return ((bool)(this["donotchangethis"]));
             }
             set {
                 this["donotchangethis"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool autoupdate {
+            get {
+                return ((bool)(this["autoupdate"]));
+            }
+            set {
+                this["autoupdate"] = value;
             }
         }
     }

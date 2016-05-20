@@ -24,8 +24,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>53</ApplicationRevision>
-    <ApplicationVersion>1.1.1.%2a</ApplicationVersion>
+    <ApplicationRevision>64</ApplicationRevision>
+    <ApplicationVersion>1.1.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -110,6 +110,12 @@
     </Compile>
     <Compile Include="FolderSelectDialog\FolderSelectDialog.cs" />
     <Compile Include="FolderSelectDialog\Reflector.cs" />
+    <Compile Include="frm_about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_about.designer.cs">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_folder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="frm_program.designer.cs">
       <DependentUpon>frm_program.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_update.designer.cs">
+      <DependentUpon>frm_update.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_website.cs">
       <SubType>Form</SubType>
@@ -154,6 +166,9 @@
     <EmbeddedResource Include="CustomControls\WebsiteButtons.resx">
       <DependentUpon>WebsiteButtons.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_about.resx">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_folder.resx">
       <DependentUpon>frm_folder.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_program.resx">
       <DependentUpon>frm_program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_update.resx">
+      <DependentUpon>frm_update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_website.resx">
       <DependentUpon>frm_website.cs</DependentUpon>
@@ -273,6 +291,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\icon_128x128.png" />
     <None Include="Resources\show_small_icon.png" />
     <None Include="Resources\close_small_icon.gif" />
     <None Include="Resources\defaultlogo.png" />

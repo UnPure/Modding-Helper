@@ -55,11 +55,12 @@
             this.btn_addWebsite = new Modding_Helper.CustomButtonFlat();
             this.flowWebsite = new System.Windows.Forms.TableLayoutPanel();
             this.pnl_settings = new System.Windows.Forms.Panel();
+            this.btn_about = new Modding_Helper.CustomButtonFlat();
+            this.btn_checkForUpdate = new Modding_Helper.CustomButtonFlat();
+            this.cb_checkForUpdates = new Modding_Helper.CustomCheckBox();
             this.btn_resetSettings = new Modding_Helper.CustomButtonFlat();
             this.btn_exportSettings = new Modding_Helper.CustomButtonFlat();
             this.btn_importSettings = new Modding_Helper.CustomButtonFlat();
-            this.imgSettings = new System.Windows.Forms.PictureBox();
-            this.seperator2 = new System.Windows.Forms.PictureBox();
             this.cb_stickyWindow = new Modding_Helper.CustomCheckBox();
             this.cb_alwaysOnTop = new Modding_Helper.CustomCheckBox();
             this.cb_closeToTray = new Modding_Helper.CustomCheckBox();
@@ -92,8 +93,6 @@
             this.pnl_folder.SuspendLayout();
             this.pnl_websites.SuspendLayout();
             this.pnl_settings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgSettings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seperator2)).BeginInit();
             this.cms_notify.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainBoxHeaderCenter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainBoxHeaderBack)).BeginInit();
@@ -537,11 +536,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_settings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnl_settings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnl_settings.Controls.Add(this.btn_about);
+            this.pnl_settings.Controls.Add(this.btn_checkForUpdate);
+            this.pnl_settings.Controls.Add(this.cb_checkForUpdates);
             this.pnl_settings.Controls.Add(this.btn_resetSettings);
             this.pnl_settings.Controls.Add(this.btn_exportSettings);
             this.pnl_settings.Controls.Add(this.btn_importSettings);
-            this.pnl_settings.Controls.Add(this.imgSettings);
-            this.pnl_settings.Controls.Add(this.seperator2);
             this.pnl_settings.Controls.Add(this.cb_stickyWindow);
             this.pnl_settings.Controls.Add(this.cb_alwaysOnTop);
             this.pnl_settings.Controls.Add(this.cb_closeToTray);
@@ -551,6 +551,74 @@
             this.pnl_settings.Padding = new System.Windows.Forms.Padding(10);
             this.pnl_settings.Size = new System.Drawing.Size(304, 333);
             this.pnl_settings.TabIndex = 32;
+            // 
+            // btn_about
+            // 
+            this.btn_about.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_about.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_about.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_about.BackgroundImage")));
+            this.btn_about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_about.DisplayFocusCues = false;
+            this.btn_about.DrawBorder = true;
+            this.btn_about.DrawClickBorder = true;
+            this.btn_about.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_about.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btn_about.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_about.Location = new System.Drawing.Point(13, 249);
+            this.btn_about.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.btn_about.Name = "btn_about";
+            this.btn_about.OwnerDrawText = "About";
+            this.btn_about.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.btn_about.Size = new System.Drawing.Size(278, 25);
+            this.btn_about.TabIndex = 14;
+            this.btn_about.TabStop = false;
+            this.toolTip.SetToolTip(this.btn_about, "Import saved settings");
+            this.btn_about.UseVisualStyleBackColor = false;
+            this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
+            // 
+            // btn_checkForUpdate
+            // 
+            this.btn_checkForUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_checkForUpdate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_checkForUpdate.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_checkForUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_checkForUpdate.BackgroundImage")));
+            this.btn_checkForUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_checkForUpdate.DisplayFocusCues = false;
+            this.btn_checkForUpdate.DrawBorder = true;
+            this.btn_checkForUpdate.DrawClickBorder = true;
+            this.btn_checkForUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_checkForUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_checkForUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btn_checkForUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_checkForUpdate.Location = new System.Drawing.Point(13, 218);
+            this.btn_checkForUpdate.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.btn_checkForUpdate.Name = "btn_checkForUpdate";
+            this.btn_checkForUpdate.OwnerDrawText = "Check for Updates";
+            this.btn_checkForUpdate.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.btn_checkForUpdate.Size = new System.Drawing.Size(278, 25);
+            this.btn_checkForUpdate.TabIndex = 13;
+            this.btn_checkForUpdate.TabStop = false;
+            this.toolTip.SetToolTip(this.btn_checkForUpdate, "Import saved settings");
+            this.btn_checkForUpdate.UseVisualStyleBackColor = false;
+            this.btn_checkForUpdate.Click += new System.EventHandler(this.btn_checkForUpdate_Click);
+            // 
+            // cb_checkForUpdates
+            // 
+            this.cb_checkForUpdates.AutoSize = true;
+            this.cb_checkForUpdates.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cb_checkForUpdates.DisplayFocusCues = false;
+            this.cb_checkForUpdates.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.cb_checkForUpdates.Location = new System.Drawing.Point(13, 101);
+            this.cb_checkForUpdates.Name = "cb_checkForUpdates";
+            this.cb_checkForUpdates.Size = new System.Drawing.Size(158, 18);
+            this.cb_checkForUpdates.TabIndex = 12;
+            this.cb_checkForUpdates.Text = "Auto-Check for Updates";
+            this.cb_checkForUpdates.UseVisualStyleBackColor = false;
+            this.cb_checkForUpdates.CheckedChanged += new System.EventHandler(this.cb_checkForUpdates_CheckedChanged);
             // 
             // btn_resetSettings
             // 
@@ -567,7 +635,7 @@
             this.btn_resetSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_resetSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btn_resetSettings.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_resetSettings.Location = new System.Drawing.Point(13, 156);
+            this.btn_resetSettings.Location = new System.Drawing.Point(13, 187);
             this.btn_resetSettings.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.btn_resetSettings.Name = "btn_resetSettings";
             this.btn_resetSettings.OwnerDrawText = "Reset Settings";
@@ -594,7 +662,7 @@
             this.btn_exportSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exportSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btn_exportSettings.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_exportSettings.Location = new System.Drawing.Point(13, 125);
+            this.btn_exportSettings.Location = new System.Drawing.Point(13, 156);
             this.btn_exportSettings.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.btn_exportSettings.Name = "btn_exportSettings";
             this.btn_exportSettings.OwnerDrawText = "Export Settings";
@@ -621,7 +689,7 @@
             this.btn_importSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_importSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btn_importSettings.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_importSettings.Location = new System.Drawing.Point(13, 94);
+            this.btn_importSettings.Location = new System.Drawing.Point(13, 125);
             this.btn_importSettings.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.btn_importSettings.Name = "btn_importSettings";
             this.btn_importSettings.OwnerDrawText = "Import Settings";
@@ -633,38 +701,13 @@
             this.btn_importSettings.UseVisualStyleBackColor = false;
             this.btn_importSettings.Click += new System.EventHandler(this.btn_importSettings_Click);
             // 
-            // imgSettings
-            // 
-            this.imgSettings.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgSettings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.imgSettings.BackgroundImage = global::Modding_Helper.Properties.Resources.defaultlogo;
-            this.imgSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.imgSettings.Location = new System.Drawing.Point(0, 191);
-            this.imgSettings.Name = "imgSettings";
-            this.imgSettings.Size = new System.Drawing.Size(304, 142);
-            this.imgSettings.TabIndex = 8;
-            this.imgSettings.TabStop = false;
-            // 
-            // seperator2
-            // 
-            this.seperator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.seperator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("seperator2.BackgroundImage")));
-            this.seperator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.seperator2.Location = new System.Drawing.Point(0, 184);
-            this.seperator2.Name = "seperator2";
-            this.seperator2.Size = new System.Drawing.Size(304, 8);
-            this.seperator2.TabIndex = 7;
-            this.seperator2.TabStop = false;
-            // 
             // cb_stickyWindow
             // 
             this.cb_stickyWindow.AutoSize = true;
             this.cb_stickyWindow.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cb_stickyWindow.DisplayFocusCues = false;
             this.cb_stickyWindow.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.cb_stickyWindow.Location = new System.Drawing.Point(13, 71);
+            this.cb_stickyWindow.Location = new System.Drawing.Point(13, 79);
             this.cb_stickyWindow.Name = "cb_stickyWindow";
             this.cb_stickyWindow.Size = new System.Drawing.Size(106, 18);
             this.cb_stickyWindow.TabIndex = 3;
@@ -678,7 +721,7 @@
             this.cb_alwaysOnTop.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cb_alwaysOnTop.DisplayFocusCues = false;
             this.cb_alwaysOnTop.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.cb_alwaysOnTop.Location = new System.Drawing.Point(13, 49);
+            this.cb_alwaysOnTop.Location = new System.Drawing.Point(13, 57);
             this.cb_alwaysOnTop.Name = "cb_alwaysOnTop";
             this.cb_alwaysOnTop.Size = new System.Drawing.Size(107, 18);
             this.cb_alwaysOnTop.TabIndex = 2;
@@ -692,7 +735,7 @@
             this.cb_closeToTray.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cb_closeToTray.DisplayFocusCues = false;
             this.cb_closeToTray.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.cb_closeToTray.Location = new System.Drawing.Point(13, 27);
+            this.cb_closeToTray.Location = new System.Drawing.Point(13, 35);
             this.cb_closeToTray.Name = "cb_closeToTray";
             this.cb_closeToTray.Size = new System.Drawing.Size(100, 18);
             this.cb_closeToTray.TabIndex = 1;
@@ -706,7 +749,7 @@
             this.cb_minimizeToTray.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cb_minimizeToTray.DisplayFocusCues = false;
             this.cb_minimizeToTray.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.cb_minimizeToTray.Location = new System.Drawing.Point(13, 5);
+            this.cb_minimizeToTray.Location = new System.Drawing.Point(13, 13);
             this.cb_minimizeToTray.Name = "cb_minimizeToTray";
             this.cb_minimizeToTray.Size = new System.Drawing.Size(118, 18);
             this.cb_minimizeToTray.TabIndex = 0;
@@ -1033,8 +1076,6 @@
             this.pnl_websites.PerformLayout();
             this.pnl_settings.ResumeLayout(false);
             this.pnl_settings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgSettings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seperator2)).EndInit();
             this.cms_notify.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainBoxHeaderCenter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainBoxHeaderBack)).EndInit();
@@ -1090,8 +1131,6 @@
         private CustomCheckBox cb_alwaysOnTop;
         private CustomCheckBox cb_closeToTray;
         private CustomCheckBox cb_minimizeToTray;
-        private System.Windows.Forms.PictureBox imgSettings;
-        private System.Windows.Forms.PictureBox seperator2;
         private CustomButtonFlat btn_importSettings;
         private CustomButtonFlat btn_resetSettings;
         private CustomButtonFlat btn_exportSettings;
@@ -1108,6 +1147,9 @@
         private System.Windows.Forms.ContextMenuStrip cms_notify;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private CustomButtonFlat btn_checkForUpdate;
+        private CustomCheckBox cb_checkForUpdates;
+        private CustomButtonFlat btn_about;
     }
 }
 

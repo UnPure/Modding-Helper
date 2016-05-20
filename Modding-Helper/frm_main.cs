@@ -20,20 +20,26 @@ using System.IO;
 using System.Net;
 using System.Windows.Forms;
 using Modding_Helper.CustomControls;
+using System.Xml;
 
 namespace Modding_Helper
 {
     public partial class frm_main : Form
     {
-        #region Constructor
-        private Blue.Windows.StickyWindow stickyWindow;
-        #endregion
-
         #region frm_main
+        private Blue.Windows.StickyWindow stickyWindow;
+
         public frm_main()
         {
             InitializeComponent();
-
+            
+            if (Properties.Settings.Default.donotchangethis)
+            {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.Save();
+                Properties.Settings.Default.donotchangethis = false;
+            }
+            
             stickyWindow = new Blue.Windows.StickyWindow(this);
 
             if (Properties.Settings.Default.FolderButtonStringCollection == null)
@@ -49,12 +55,6 @@ namespace Modding_Helper
             if (Properties.Settings.Default.WebsiteButtonStringCollection == null)
             {
                 Properties.Settings.Default.WebsiteButtonStringCollection = new StringCollection();
-            }
-
-            if (Properties.Settings.Default.donotchangethis)
-            {
-                Properties.Settings.Default.Upgrade();
-                Properties.Settings.Default.donotchangethis = false;
             }
 
             selectButton(btn_modding, pnl_modding);
@@ -83,6 +83,7 @@ namespace Modding_Helper
             cb_minimizeToTray.Checked = Properties.Settings.Default.minimizetotray;
             cb_closeToTray.Checked = Properties.Settings.Default.closetotray;
             cb_stickyWindow.Checked = Properties.Settings.Default.stickywindow;
+            cb_checkForUpdates.Checked = Properties.Settings.Default.autoupdate;
 
             this.TopMost = Properties.Settings.Default.alwaysontop;
             stickyWindow.StickOnMove = Properties.Settings.Default.stickywindow;
@@ -150,6 +151,11 @@ namespace Modding_Helper
 
                 //imgModding.BackgroundImage = Properties.Resources.defaultlogo;
                 //imgSettings.BackgroundImage = Properties.Resources.defaultlogo;
+            }
+
+            if (Properties.Settings.Default.autoupdate)
+            {
+                checkForUpdates(false);
             }
         }
 
@@ -433,6 +439,85 @@ namespace Modding_Helper
 
             return char.ToUpper(s[0]) + s.Substring(1);
         }
+
+        private static void checkForUpdates(bool autoupdate)
+        {
+            if (CheckForInternetConnection())
+            {
+                Version newVersion = null;
+                string url;
+                string description = "";
+                XmlTextReader reader = null;
+
+                try
+                {
+                    string xmlURL = "http://unpure-gaming.de/modding/update.xml";
+                    reader = new XmlTextReader(xmlURL);
+                    reader.MoveToContent();
+                    string elementName = "";
+
+                    if ((reader.NodeType == XmlNodeType.Element) && (reader.Name == "moddinghelper"))
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.NodeType == XmlNodeType.Element)
+                            {
+                                elementName = reader.Name;
+                            }
+                            else
+                            {
+                                if ((reader.NodeType == XmlNodeType.Text) && (reader.HasValue))
+                                {
+                                    switch (elementName)
+                                    {
+                                        case "version":
+                                            newVersion = new Version(reader.Value);
+                                            break;
+                                        case "url":
+                                            url = reader.Value;
+                                            break;
+                                        case "description":
+                                            description = reader.Value;
+                                            break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+                finally
+                {
+                    if (reader != null)
+                    {
+                        reader.Close();
+                    }
+                }
+
+                Version curVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+
+                if (curVersion.CompareTo(newVersion) < 0)
+                {
+                    frm_update frm_update = new frm_update();
+                    frm_update.curVersion.Text = Convert.ToString(curVersion);
+                    frm_update.newVersion.Text = Convert.ToString(newVersion);
+                    frm_update.rtb_changelog.Text = description;
+                    frm_update.ShowDialog();
+                }
+
+                if (curVersion.CompareTo(newVersion) >= 0 && autoupdate)
+                {
+                    MessageBox.Show("No Updates Available!");
+                }
+            }
+            else if (!CheckForInternetConnection() && autoupdate)
+            {
+                MessageBox.Show("Could not search for updates!");
+            }
+        }
         #endregion
 
         #region MainButtons_Click
@@ -588,6 +673,17 @@ namespace Modding_Helper
                 this.Close();
             }
         }
+
+        private void btn_checkForUpdate_Click(object sender, EventArgs e)
+        {
+            checkForUpdates(true);
+        }
+
+        private void btn_about_Click(object sender, EventArgs e)
+        {
+            frm_about frm_about = new frm_about();
+            frm_about.ShowDialog();
+        }
         #endregion
 
         #region HoverEffects
@@ -665,6 +761,19 @@ namespace Modding_Helper
             {
                 Properties.Settings.Default.stickywindow = false;
                 stickyWindow.StickOnMove = false;
+            }
+            Properties.Settings.Default.Save();
+        }
+
+        private void cb_checkForUpdates_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_checkForUpdates.Checked)
+            {
+                Properties.Settings.Default.autoupdate = true;
+            }
+            else
+            {
+                Properties.Settings.Default.autoupdate = false;
             }
             Properties.Settings.Default.Save();
         }
