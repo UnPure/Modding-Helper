@@ -1,0 +1,2 @@
+If you updated from a previous version, just replace the old "Modding-Helper.exe" with the new "Modding-Helper.exe".
+If you are going to update i highly recommend you to export the settings in the old Modding-Helper before replacing!

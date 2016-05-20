@@ -1,8 +1,16 @@
-v1.0.0.0
-- Initial Release
+v1.1.2.64
+- Added Check for Update Button.
+- Added Auto-Check for Updates (Option).
+- Added About Page.
+
+v1.1.1.53
+- Improved UI.
 
 v1.1.0.47
 - Complete rewrite of the Modding-Helper.
 --- Modding-Helper now supports resizing.
 - Fixed a few typos.
 - Added an option to enabled/disable StickyWindow.
+
+v1.0.0.0
+- Initial Release
