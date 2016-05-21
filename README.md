@@ -38,7 +38,7 @@ Call of Duty: Black Ops III Mod Tools are currently in a closed alpha state.<br>
 * Everyone out there who spends time to create custom content (Maps/Mods) for the community!
 
 <br><br>
-**Download:**
+**Download (v1.1.2.64):**
 <br>[Mirror #1 (UnPure Gaming)](http://unpure-gaming.de/index/files/download/where/55/target/1)
 <br>[Mirror #2 (Google Drive)](http://unpure-gaming.de/index/files/download/where/55/target/2)
 
