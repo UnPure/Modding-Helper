@@ -11,10 +11,14 @@ Back in the old days while creating maps and mods for old Call of Duty games, i 
 * Add a button to quickly open a website you regulary need in your default browser.
 * Decide if you want the Modding-Helper to stay always on top.
 * Decide if you want to minimize or close the Modding-Helper to your tray.
+* More stuff, just test it!
 
 <br><br>
 **Planed Features:**<br>
 Call of Duty: Black Ops III Mod Tools are currently in a closed alpha state.<br>Sadly i dont have access to the tools while they are in closed alpha therefor not all features are implemented now!<br>I'm going to implement more features when the tools hit the open beta stage.<br>Got ideas for more features? Tell me!
+
+<br><br>I would realy appreciate feedback and/or feature requests/ideas from everyone who is involved in the closed alpha.
+<br>I dont have access to the alpha of the modtools and without your help i cant improve the Modding-Helper!
 
 <br><br>
 **Screenshots:**<br>
@@ -37,3 +41,9 @@ Call of Duty: Black Ops III Mod Tools are currently in a closed alpha state.<br>
 **Download:**
 <br>[Mirror #1 (UnPure Gaming)](http://unpure-gaming.de/index/files/download/where/55/target/1)
 <br>[Mirror #2 (Google Drive)](http://unpure-gaming.de/index/files/download/where/55/target/2)
+
+<br><br>
+**Update Notes:**
+<br>If you are going to update to v1.1.2.64 from a version before v1.1.0.47 you have to recreate the settings.
+<br>If you are going to update from v1.1.0.47 or later, i highly recommend you to export your settings **before** downloading the latest version. In some rare situations the settings are not migrated directly but can be imported without problems.
+<br>
